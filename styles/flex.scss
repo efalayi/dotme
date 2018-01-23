@@ -1,0 +1,23 @@
+/* 
+  FLEX LAYOUT
+*/
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container--col {
+  flex-direction: column;
+}
+
+.flex-container--header {
+  flex: 1;
+}
+
+.flex-container--row {
+  flex-direction: row;
+}
+
+.flex-item {
+  flex-grow: 1;
+}
