@@ -31,6 +31,22 @@
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
+.stack .flex-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .stack .flex-container .tool {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%; }
+
+@media screen and (min-width: 768px) {
+  .stack .flex-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .stack .flex-container .tool {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; } }
+
 /* 
   CSS GRID LAYOUT
 */
@@ -48,11 +64,6 @@
 .grid-col--2 {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); }
-
-.grid-col--4 {
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: calc((100vh - 5px) / 2); }
 
 .grid-item {
   box-sizing: border-box;
@@ -93,31 +104,72 @@
 .intro {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px;
+  grid-auto-rows: 10px 1fr 1fr;
+  -ms-grid-columns: 3px 1fr 3px;
+      grid-template-columns: 3px 1fr 3px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-grid-column-align: center;
       justify-items: center; }
   .intro .img-container {
-    -ms-grid-column: span 2;
-        grid-column: span 2;
-    justify-self: end; }
+    -ms-grid-column: 2;
+        grid-column: 2;
+    -ms-grid-row: 2;
+        grid-row: 2; }
   .intro .description {
-    grid-column: 3 / 5; }
+    -ms-grid-column: 2;
+        grid-column: 2;
+    -ms-grid-row: 3;
+        grid-row: 3; }
 
-footer {
+.social-media {
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 150px; }
+
+.social-media--header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: span 3;
-      grid-column: span 3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-grid-column-align: center;
       justify-items: center; }
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-items: center; }
+
+@media screen and (min-width: 768px) {
+  .intro {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 40px; }
+    .intro .img-container {
+      -ms-grid-column: span 2;
+          grid-column: span 2;
+      -ms-grid-row: 1;
+          grid-row: 1;
+      justify-self: end; }
+    .intro .description {
+      grid-column: 3 / 5;
+      -ms-grid-row: 1;
+          grid-row: 1; }
+  .social-media {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: calc((100vh - 5px) / 2); }
+  footer {
+    -ms-grid-column: span 3;
+        grid-column: span 3; } }
 
 body {
   padding: 0;
@@ -140,6 +192,14 @@ header {
 footer {
   background-color: #130c14;
   color: white; }
+  footer ul {
+    margin: 0;
+    padding: 0; }
+    footer ul li {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 0.8rem; }
 
 .site-page {
   border-top: 3px solid #57a2d3; }
@@ -156,20 +216,18 @@ footer {
     border-top: 2px solid #77b0ca;
     border-left: 2px solid #77b0ca; }
 
-#social-media .platform {
+.description {
+  text-align: center; }
+
+.social-media .platform {
   padding: 0.5em;
   color: white; }
 
-#social-media--header {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-column-align: center;
-      justify-items: center;
+.social-media--header {
   background-color: #77b0ca;
   color: #130c14; }
+  .social-media--header h3 {
+    text-align: center; }
 
 .platform--overlay {
   background-color: #0f131e; }
@@ -198,9 +256,10 @@ footer {
 #github {
   background-color: #0f131e; }
 
-#stack .tool {
+.stack .tool {
   padding: 0em 0.5em;
-  color: #130c14; }
+  color: #161c2b;
+  font-weight: 500; }
 
 #html5 {
   background-color: #E34F26; }
@@ -219,3 +278,9 @@ footer {
 
 #webpack {
   background-color: #1D78C1; }
+
+@media screen and (min-width: 768px) {
+  footer ul li {
+    font-size: 1rem; }
+  .description {
+    text-align: left; } }

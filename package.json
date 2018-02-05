@@ -4,6 +4,7 @@
   "description": "A byte about Esther Falayi",
   "main": "js/app.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,6 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "l": "^0.6.0",
     "webpack": "^3.10.0"
   },
   "devDependencies": {

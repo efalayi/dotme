@@ -27,6 +27,16 @@ header {
 footer {
   background-color: $BLACK_3;
   color: $WHITE;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .site-page {
@@ -47,17 +57,21 @@ footer {
   }
 }
 
-#social-media .platform {
+.description {
+  text-align: center;
+}
+
+.social-media .platform {
   padding: 0.5em;
   color: $WHITE;
 }
 
-#social-media--header {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+.social-media--header {
   background-color: $LIGHT_BLUE;
   color: $BLACK_3;
+  h3 {
+    text-align: center;
+  }
 }
 
 .platform--overlay {
@@ -95,10 +109,11 @@ footer {
   background-color: $BLACK_2;
 }
 
-#stack {
+.stack {
   .tool {
     padding: 0em 0.5em;
-    color: $BLACK_3;
+    color: $BLACK_1;
+    font-weight: 500;
   }
 }
 
@@ -124,4 +139,17 @@ footer {
 
 #webpack {
   background-color: $WEBPACK;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+  .description {
+    text-align: left;
+  }
 }
