@@ -1,26 +1,40 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const environment = process.env.NODE_ENV;
+const isDevMode = environment === 'development';
 
 module.exports = {
-  context: path.resolve('js'),
-  entry: './app.js',
+  mode: environment,
+  entry: './js/app.js',
   output: {
     path: path.resolve('build/'),
     publicPath: 'build/',
     filename: 'bundle.js'
   },
+  devServer: {
+    compress: true
+  },
  plugins: [
-  new ExtractTextPlugin('styles/main.css')
+   new MiniCssExtractPlugin({
+     filename: 'styles/[name].css',
+     chunkFilename: 'styles/[id].css',
+   })
  ],
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!autoprefixer-loader!sass-loader'
-        })
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { hmr: isDevMode },
+          },
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpe?g)$/,
@@ -42,5 +56,5 @@ module.exports = {
       }
     ]
   },
-  watch: true,
+  watch: isDevMode,
 }
