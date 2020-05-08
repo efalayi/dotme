@@ -1,14 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { ReactElement } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from "./Header"
-import "./layout.css"
+import Header from './Header'
+import './layout.css'
 
 type LayoutProps = {
-  children: {},
+  children: {}
 }
 
-const Layout = ({ children }: LayoutProps) => {
+function Layout({ children }: LayoutProps): ReactElement {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
       }
     }
   `)
+  const currentYear = new Date().getFullYear()
 
   return (
     <>
@@ -30,12 +31,10 @@ const Layout = ({ children }: LayoutProps) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+        }}>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
+          {`© ${currentYear},Built with `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>

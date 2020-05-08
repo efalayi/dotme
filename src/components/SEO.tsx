@@ -1,6 +1,6 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { ReactElement } from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const defaultProps = {
   lang: `en`,
@@ -9,10 +9,10 @@ const defaultProps = {
 }
 
 type SEOProps = {
-  title: string,
+  title: string
 } & typeof defaultProps
 
-function SEO({ description, lang, meta, title }: SEOProps) {
+function SEO({ description, lang, meta, title }: SEOProps): ReactElement {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,7 +24,7 @@ function SEO({ description, lang, meta, title }: SEOProps) {
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
@@ -75,4 +75,4 @@ function SEO({ description, lang, meta, title }: SEOProps) {
 }
 
 export default SEO
-SEO.defaultProps = defaultProps;
+SEO.defaultProps = defaultProps
