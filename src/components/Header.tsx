@@ -1,41 +1,28 @@
 import React, { ReactElement } from 'react'
-import { Link } from 'gatsby'
 
-const defaultProps = {
-  siteTitle: `View the source`,
-}
+import Stack from './Stack'
+import Image from './Image'
 
-type HeaderProps = { description: string } & typeof defaultProps
-
-function Header(props: HeaderProps): ReactElement {
-  const { description, siteTitle } = props
+function Header(): ReactElement {
   return (
-    <header
-      style={{
-        background: `rebeccapurple`,
-        marginBottom: `1.45rem`,
-      }}>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}>
-            {siteTitle}
-          </Link>
-        </h1>
-        <h6>{description}</h6>
+    <header className="grid-container grid-container--header">
+      <div className="intro">
+        <div className="img-container">
+          <Image fileName="ef.jpg" alt="Esther Falayi" />
+        </div>
+        <div className="description">
+          <h3>Hi,</h3>
+          <p>I am Esther Falayi.</p>
+          <p>A Software Developer at Andela.</p>
+          <p>
+            And I love everything that revolves around UI/UX and frontend
+            development.
+          </p>
+        </div>
       </div>
+      <Stack />
     </header>
   )
 }
 
 export default Header
-Header.defaultProps = defaultProps

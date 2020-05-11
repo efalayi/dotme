@@ -1,0 +1,155 @@
+@import 'variables';
+@import 'flex';
+@import 'cssgrid';
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $YELLOW;
+  background-color: $WHITE;
+  font-family: Courier New, Courier, monospace;
+}
+
+h1 {
+  color: aquamarine;
+}
+
+a {
+  text-decoration: none;  
+}
+
+header {
+  height: calc(100vh - 3px);
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(30deg, $BLACK_2 50%, $BLACK_1 50%);
+}
+
+footer {
+  background-color: $BLACK_3;
+  color: $WHITE;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.site-page {
+  border-top: 3px solid $DARK_BLUE;
+}
+
+.img-container {
+  height: 195px;
+  width: 250px;
+  border-radius: 10%;
+  border-left: 2px solid $DARK_BLUE;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    border-top: 2px solid $LIGHT_BLUE;
+    border-left: 2px solid $LIGHT_BLUE;
+  }
+}
+
+.description {
+  text-align: center;
+}
+
+.social-media .platform {
+  padding: 0.5em;
+  color: $WHITE;
+}
+
+.social-media--header {
+  background-color: $LIGHT_BLUE;
+  color: $BLACK_3;
+  h3 {
+    text-align: center;
+  }
+}
+
+.platform--overlay {
+  background-color: $BLACK_2;
+  a {
+    color: $WHITE;
+    text-transform: uppercase;
+    padding: 1em;
+    border: 2px solid $WHITE;
+  }
+  a::after {
+    font-family: FontAwesome;
+    content: '\f178';
+    margin-left: 0.8em;
+  }
+}
+
+#facebook {
+  background-color: $BLACK_1;
+}
+
+#twitter {
+  background-color: $BLACK_2;
+}
+
+#instagram {
+  background-color: $BLACK_3;
+}
+
+#medium {
+  background-color: $BLACK_1;
+}
+
+#github {
+  background-color: $BLACK_2;
+}
+
+.stack {
+  .tool {
+    padding: 0em 0.5em;
+    color: $BLACK_1;
+    font-weight: 500;
+  }
+}
+
+#html5 {
+  background-color: $HTML5;
+}
+
+#stylesheets {
+  background-color: $CSS;
+}
+
+#javascript {
+  background-color: $JAVASCRIPT;
+}
+
+#react {
+  background-color: $REACT;
+}
+
+#node {
+  background-color: $NODE_DARK;
+}
+
+#webpack {
+  background-color: $WEBPACK;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+  .description {
+    text-align: left;
+  }
+}
