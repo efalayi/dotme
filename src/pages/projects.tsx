@@ -4,7 +4,7 @@ import { PageProps, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-const ProjectsPage: FunctionComponent<PageProps> = (props: PageProps) => {
+const ProjectsPage: FunctionComponent<PageProps> = props => {
   const { path } = props
   return (
     <Layout>

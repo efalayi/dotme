@@ -6,11 +6,7 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    project: './tsconfig.json',
   },
   plugins: ["@typescript-eslint", "prettier", "react", "react-hooks"],
   rules: {
@@ -58,5 +54,13 @@ module.exports = {
         "paths": ["src"]
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
 };
