@@ -3,6 +3,15 @@
   "version": "2.0.0",
   "description": "A byte about Esther Falayi",
   "author": "Esther Falayi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efalayi/efalayi.github.io.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efalayi/efalayi.github.io/issues"
+  },
+  "homepage": "https://github.com/efalayi/efalayi.github.io#readme",
   "dependencies": {
     "gatsby": "^2.21.13",
     "gatsby-image": "^2.4.1",
@@ -41,18 +50,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint \"src/**/*.{ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/efalayi/efalayi.github.io.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/efalayi/efalayi.github.io/issues"
-  },
-  "homepage": "https://github.com/efalayi/efalayi.github.io#readme"
+    "clean": "gatsby clean"
+  }
 }
