@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "efalayi.github.io",
+  "version": "2.0.0",
+  "description": "A byte about Esther Falayi",
+  "author": "Esther Falayi",
   "dependencies": {
     "gatsby": "^2.21.13",
     "gatsby-image": "^2.4.1",
@@ -37,7 +36,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -50,9 +48,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "git+https://github.com/efalayi/efalayi.github.io.git"
   },
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "url": "https://github.com/efalayi/efalayi.github.io/issues"
+  },
+  "homepage": "https://github.com/efalayi/efalayi.github.io#readme"
 }
