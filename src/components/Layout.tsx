@@ -1,23 +1,28 @@
 import React, { ReactElement } from 'react'
 
-import Header from './Header'
 import Footer from './Footer'
-import '../styles/main.scss'
+
+import '../styles/site.scss'
+
+const defaultProps = {
+  showFooter: false,
+}
 
 type LayoutProps = {
   children: {}
-}
+} & typeof defaultProps
 
-function Layout({ children }: LayoutProps): ReactElement {
+function Layout(props: LayoutProps): ReactElement {
+  const { children, showFooter } = props
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className="site-page flex-container flex-container--col">
-      <Header />
+    <div className="site">
       <main>{children}</main>
-      <Footer year={currentYear} />
+      {showFooter && <Footer year={currentYear} />}
     </div>
   )
 }
 
 export default Layout
+Layout.defaultProps = defaultProps
