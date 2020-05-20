@@ -1,17 +1,17 @@
 {
-  "name": "efalayi.github.io",
+  "name": "dotme",
   "version": "2.0.0",
   "description": "A byte about Esther Falayi",
   "author": "Esther Falayi",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/efalayi/efalayi.github.io.git"
+    "url": "git+https://github.com/efalayi/dotme.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/efalayi/efalayi.github.io/issues"
+    "url": "https://github.com/efalayi/dotme/issues"
   },
-  "homepage": "https://github.com/efalayi/efalayi.github.io#readme",
+  "homepage": "https://github.com/efalayi/dotme#readme",
   "dependencies": {
     "gatsby": "^2.21.13",
     "gatsby-image": "^2.4.1",
@@ -49,7 +49,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "lint": "eslint \"src/**/*.{ts,tsx,json,md}\"",
     "start": "yarn develop",
