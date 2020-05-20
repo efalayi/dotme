@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{QeBL:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),c=t("soUV"),r=t("1Yd/");n.default=function(){return o.a.createElement(c.a,null,o.a.createElement(r.a,{title:"Home"}))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-486fd67dd5c73196bbc7.js.map
