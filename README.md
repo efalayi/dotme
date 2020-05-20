@@ -1,7 +1,9 @@
-# efalayi.github.io
-Find out a byte about Esther Falayi [here](https://efalayi.github.io/)
+## dotme
+Find out a byte about Esther Falayi [here](https://efalayi.github.io/dotme/)
 
 
-Licenses
+##### License
+[Gatsby](LICENSE.Gatsby)
 ---
-[Esther Falayi](https://efalayi.github.io/LICENSE) | [Gatsby](https://efalayi.github.io/LICENSE.Gatsby)
+
+###### Esther Falayi © 2020
